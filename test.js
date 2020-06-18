@@ -1,7 +1,10 @@
-function testStack() {
+function useStack() {
   let Stack = require("./stack.js");
   let stack = new Stack();
-  console.log("Is stack empty " + stack.isEmpty());
+
+  stack.print();
+  console.log("peek", stack.peek());
+  console.log("Is stack empty " + stack.isEmpty(), poped);
   let length = stack.length();
   console.log("Length = " + length);
   stack.push("Test1");
@@ -30,7 +33,29 @@ function generatePrintBinaryWithQueue(n) {
     queue.enqueue(s2 + "1");
   }
 }
+
+function useGraph() {
+  let Graph = require("./graph.js");
+  const graph = new Graph(6);
+  graph.addVertex("A");
+  graph.addVertex("B");
+  graph.addVertex("C");
+  graph.addVertex("D");
+  graph.addVertex("E");
+  graph.addVertex("F");
+  graph.addEdge("A", "B");
+  graph.addEdge("A", "D");
+  graph.addEdge("A", "E");
+  graph.addEdge("B", "C");
+  graph.addEdge("C", "E");
+  graph.addEdge("C", "F");
+  graph.addEdge("D", "E");
+  graph.addEdge("E", "F");
+  graph.printGraph();
+}
 console.log("---Testing stack---");
-testStack();
+useStack();
 console.log("---Generating binary ---");
 generatePrintBinaryWithQueue(13);
+console.log("---Testing Graph---");
+useGraph();

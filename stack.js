@@ -30,6 +30,7 @@ class Stack {
   }
 
   print() {
+    if (this.isEmpty()) console.log('Stack is empty');
     let top = this.top - 1;
     while (top >= 0) {
       console.log(this.items[top]);
