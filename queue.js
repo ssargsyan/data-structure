@@ -30,7 +30,7 @@ class Queue {
   dequeue() {
     if (this.isEmpty()) return null;
     this.rear = this.rear - 1;
-    this.items.shift();
+    return this.items.shift();
   }
 
   print() {
